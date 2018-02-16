@@ -1,0 +1,35 @@
+info:
+  description: mediaservice
+  version: 1.0
+
+server:
+  context-path: /
+  port: 8761
+
+spring:
+  profiles:
+    active: @defaultSpringBootProfile@
+
+management:
+  context-path: /manage
+  security:
+    enabled: false
+    roles: ACTUATOR
+  info:
+    git:
+      enabled: true
+      mode: simple
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+logging:
+  level:
+    com:
+      netfix:
+        eureka: OFF
+        discovery: OFF
+
+

@@ -1,0 +1,14 @@
+eureka:
+  client:
+    serviceUrl: http://localhost:8761/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+    healthcheck:
+      enabled: true
+
+foo:
+  ribbon:
+      eureka:
+        enabled: false
+      listOfServers: localhost:8761
+      ServerListRefreshInterval: 15000
